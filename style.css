@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
+
+/* global body styling and font settings */
+body, #container, .sectionheader, .jobtitle, .organization, .date, .description, p, ul, li {
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-size: 1em;
+    color: #444;
+    font-weight: 400;
+}
+
+#container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* banner name at top */
+#name {
+    font-size: 3em;
+    color: #33485e;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 400;
+}
+
+/* professional title below name */
+.title {
+    font-size: 1.5em;
+    color: #33485e;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+/* main section headers */
+.sectionheader {
+    font-size: 1.4em;
+    color: #33485e;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #33485e;
+    padding-bottom: 5px;
+}
+
+/* job experience entries */
+.jobtitle {
+    font-weight: 600;
+    font-size: 1.1em;
+    margin-top: 15px;
+}
+
+.organization {
+    font-style: italic;
+    color: #555;
+}
+
+.date {
+    color: #666;
+    font-size: 0.9em;
+    margin-bottom: 5px;
+}
+
+.description {
+    margin-bottom: 15px;
+}
