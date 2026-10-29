@@ -146,28 +146,46 @@
                 </section>
 
                 <!-- Publications & Featured Work Section -->
-                <section id="portfolio" class="mb-5">
-                    <h2 class="h4 font-serif fw-bold text-navy border-bottom pb-2 mb-3">Published Work</h2>
-                    <div class="list-group list-group-flush">
-                        
-                        <!-- Link 1: The New York Post -->
-                        <a href="https://nypost.com/search/xavier+serrano/?se=ny" target="_blank" rel="noopener noreferrer" class="list-group-item list-group-item-action bg-transparent px-0 py-2 d-flex justify-content-between align-items-center">
-                            <div>
-                                <strong>The New York Post</strong>
-                                <div class="small text-muted">Author Archive & Published Articles</div>
-                            </div>
-                            <span class="badge bg-navy text-gold">View →</span>
-                        </a>
+               <section id="portfolio" class="mb-5 glass-card p-4">
+        <h2 class="h4 font-serif fw-bold text-navy border-bottom pb-2 mb-3">Published Work</h2>
+        
+        <div id="articleCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner text-center py-2">
+                
+                <!-- Slide 1: The New York Post -->
+                <div class="carousel-item active">
+                    <h3 class="h5 fw-bold text-navy mb-1">The New York Post</h3>
+                    <p class="text-muted small mb-2">City Hall & Police Shack Investigative Reporting</p>
+                    <a href="https://nypost.com/search/xavier+serrano/?se=ny" target="_blank" rel="noopener noreferrer" class="btn btn-navy btn-sm">Read Archive →</a>
+                </div>
 
-                        <!-- Link 2: La Voz Latina -->
-                        <a href="https://www.lavozlatina.org/search?q=xavier+serrano" target="_blank" rel="noopener noreferrer" class="list-group-item list-group-item-action bg-transparent px-0 py-2 d-flex justify-content-between align-items-center">
-                            <div>
-                                <strong>La Voz Latina</strong>
-                                <div class="small text-muted">Campus & Community Coverage</div>
-                            </div>
-                            <span class="badge bg-navy text-gold">View →</span>
-                        </a>
+                <!-- Slide 2: La Voz Latina -->
+                <div class="carousel-item">
+                    <h3 class="h5 fw-bold text-navy mb-1">La Voz Latina</h3>
+                    <p class="text-muted small mb-2">Campus & Community Coverage</p>
+                    <a href="https://www.lavozlatina.org/search?q=xavier+serrano" target="_blank" rel="noopener noreferrer" class="btn btn-navy btn-sm">Read Archive →</a>
+                </div>
 
+                <!-- Slide 3: The Black Explosion -->
+                <div class="carousel-item">
+                    <h3 class="h5 fw-bold text-navy mb-1">The Black Explosion</h3>
+                    <p class="text-muted small mb-2">Student News & Cultural Features</p>
+                    <a href="https://blackexplosionnews.com/?s=xavier+serrano" target="_blank" rel="noopener noreferrer" class="btn btn-navy btn-sm">Read Archive →</a>
+                </div>
+
+            </div>
+
+            <!-- Carousel Navigation Controls -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#articleCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon bg-dark rounded-circle p-2" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#articleCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon bg-dark rounded-circle p-2" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </section>
                         <!-- Link 3: The Black Explosion -->
                         <a href="https://blackexplosionnews.com/?s=xavier+serrano" target="_blank" rel="noopener noreferrer" class="list-group-item list-group-item-action bg-transparent px-0 py-2 d-flex justify-content-between align-items-center">
                             <div>
