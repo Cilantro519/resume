@@ -134,3 +134,54 @@ section h2 {
         </button>
     </div>
 </section>
+.glass-card {
+    background: rgba(15, 23, 42, 0.04);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(15, 23, 42, 0.12);
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+    transition: all 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Floating Elevation Hover Effect */
+.glass-card:hover {
+    transform: translateY(-8px) scale(1.01);
+    box-shadow: 0 20px 45px rgba(15, 23, 42, 0.15);
+    border-color: #facc15; /* Interactive Gold Glow */
+}
+
+/* Interactive Border Item Hover for Education & Experience */
+.interactive-item {
+    padding: 12px 16px;
+    border-left: 4px solid #0f172a;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.5);
+    transition: all 0.3s ease;
+}
+
+.interactive-item:hover {
+    border-left-color: #facc15;
+    background: rgba(250, 204, 21, 0.08);
+    transform: translateX(6px);
+}
+
+/* School Logos */
+.school-logo {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+    border-radius: 8px;
+    background: #ffffff;
+    padding: 4px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Bolder Accolades / Awards Styling */
+.accolade-bold {
+    font-weight: 800 !important;
+    font-size: 0.98rem;
+    letter-spacing: -0.2px;
+    color: #0f172a;
+}
