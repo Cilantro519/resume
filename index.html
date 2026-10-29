@@ -3,67 +3,186 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name Resume</title>
-   <link rel="stylesheet" href="style.css">
-</head>
-<body><div id="container">
-    <!-- I built this myself! -->
-
-    <div id="name">Xavier Serrano</div>
-    <div id="title">Journalist</div>
-    <img src="my-photo.jpg" alt="Your Name Profile Photo" width="300">
-
-
-    <p class="top description">Originally born and raised in Gaithersburg,MD. I enjoy reading and writing in my spare time. Journalism is my field of choice and i enjoy reporting on music and sports.</p>
-
-    <div class="sectionheader">Contact Details</div>
-    <ul class="menu">
-               <li>Email: <a href="mailto:413289@gmail.com">413289@gmail.com</a></li>
-        <li>LinkedIn: <a href="https://www.linkedin.com/feed/">LinkedIn Profile</a></li>
-        <li>GitHub: <a href="https://github.com">GitHub Profile</a></li>
-
-    </ul>
-
-       <div class="sectionheader">Experience</div>
+    <title>Xavier Serrano | Journalist & Visual Communicator</title>
     
-    <div class="jobtitle">News Reporter Intern</div>
-    <div class="organization">The New York Post</div>
-    <div class="date">June 1, 2026 - August 8, 2026</div>
-    <p class="description">Provided insightful reporting on an array of newsworthy events while gaining information from government officials, public figures, and local citizens. Worked effectively inside City Hall and the Police Shack, assisted experienced reporters with ground reporting, and authored published articles for the media outlet.</p>
+    <!-- Google Fonts: Merriweather (Headings) & Inter (Body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Merriweather:wght@400;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap 5 CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Custom Stylesheet (MUST BE LINKED BELOW CORE BOOTSTRAP) -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-    <div class="jobtitle">Store Associate / Team Member</div>
-    <div class="organization">Potbelly Sandwich Shop</div>
-    <div class="date">August 7, 2021 - June 1, 2026</div>
-    <p class="description"Served as the longest-tenured employee at the branch, maintaining record-keeping inventory logs and resolving complex customer disputes. Handcrafted customer orders precisely, operated registers, managed large catering transactions, and received top performance reviews for work ethic.</p>
+    <!-- Navigation Menu -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-navy sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand font-serif fw-bold text-gold" href="#">Xavier Serrano</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#experience">Experience</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#education">Education</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#portfolio">Publications</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-    <div class="jobtitle">Baker</div>
-    <div class="organization">Crumbl Cookie</div>
-    <div class="date">October 2, 2022 - July 12, 2024</div>
-    <p class="description"Responsible for scaling ingredients, mixing commercial dough formulas, and preparing fresh batches of products. Maintained store inventory counts, handled high-volume point-of-sale registers, and collaborated closely with team members to ensure smooth kitchen workflows.</p>
+    <!-- Page Topper (Hero Section) -->
+    <header class="page-topper bg-navy-light text-dark py-5 border-bottom border-gold">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8 mb-4 mb-lg-0">
+                    <h1 class="display-3 font-serif fw-black text-navy text-uppercase tracking-tight">Xavier<br><span class="text-gold-dark">Serrano</span></h1>
+                    <p class="lead fw-semibold text-secondary mb-3">Journalist & Visual Communicator</p>
+                    <p class="mb-4 text-muted">Originally born and raised in Gaithersburg, MD. Passionate about reporting on music, sports, and local community stories with a modern digital edge.</p>
+                    <div class="d-flex gap-3 flex-wrap">
+                        <a href="mailto:413289@gmail.com" class="btn btn-navy">Email Me</a>
+                        <a href="https://www.linkedin.com" target="_blank" class="btn btn-outline-dark">LinkedIn</a>
+                        <a href="https://github.com/cilantro519" target="_blank" class="btn btn-outline-dark">GitHub</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 text-center">
+                    <div class="profile-frame p-2 bg-white shadow-sm d-inline-block">
+                        <!-- Profile Photo with alt tag -->
+                        <img src="my-photo.jpg" alt="Profile photo of Xavier Serrano, Journalist" class="img-fluid rounded profile-img">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
 
-    <div class="sectionheader">Education</div>
-    <ul id="degrees">
-        <li><strong>University of Maryland, College Park</strong> — Currently Attending</li>
-        <li><strong>Montgomery College, Germantown</strong> — Associate of Arts, Former Editor-in-Chief of Campus News</li>
-        <li><strong>Watkins Mill High School</strong> — High School Graduate Alumni</li>
-    </ul>
+    <!-- Main Content Grid -->
+    <main class="container my-5">
+        <div class="row g-5">
+            
+            <!-- LEFT COLUMN: Experience & Education -->
+            <div class="col-lg-8">
+                
+                <!-- Experience Section -->
+                <section id="experience" class="mb-5">
+                    <h2 class="h3 font-serif fw-bold text-navy border-bottom pb-2 mb-4">Experience</h2>
+                    
+                    <div class="experience-item mb-4">
+                        <div class="d-flex justify-content-between align-items-baseline mb-1">
+                            <h3 class="h5 fw-bold text-dark mb-0">News Reporter Intern</h3>
+                            <span class="badge bg-gold text-dark">June 2026 - Aug 2026</span>
+                        </div>
+                        <h4 class="text-muted fs-6 mb-2">The New York Post</h4>
+                        <p class="text-secondary small">Provided insightful reporting on an array of newsworthy events while gathering information from government officials, public figures, and local citizens. Worked effectively inside City Hall and the Police Shack, assisted experienced reporters with ground reporting, and authored published articles for the media outlet.</p>
+                    </div>
 
-    <div class="sectionheader">Publications</div>
-    <ul>
-        <li>The New York Post</li>
-        <li>La Voz Latina (University of Maryland)</li>
-        <li>The Black Explosion (University of Maryland)</li>
-        <li>WMUC Radio (University of Maryland Student Radio)</li>
-        <li>The Globe (Montgomery College Newspaper)</li>
-    </ul>
+                    <div class="experience-item mb-4">
+                        <div class="d-flex justify-content-between align-items-baseline mb-1">
+                            <h3 class="h5 fw-bold text-dark mb-0">Store Associate / Team Member</h3>
+                            <span class="badge bg-secondary text-light">Aug 2021 - June 2026</span>
+                        </div>
+                        <h4 class="text-muted fs-6 mb-2">Potbelly Sandwich Shop</h4>
+                        <p class="text-secondary small">Delivered fast-paced customer service, managed team operations, and maintained high standards of quality and efficiency in a high-volume environment.</p>
+                    </div>
 
-    <div class="sectionheader">Awards & Honors</div>
-    <ul>
-        <li>Senator Nancy J. King Scholarship</li>
-        <li>Dean’s List Recipient</li>
-        <li>Honor Roll (3x)</li>
-        <li>Ribbon of Hard Work</li>
-    </ul>
-</div>
+                    <div class="experience-item">
+                        <div class="d-flex justify-content-between align-items-baseline mb-1">
+                            <h3 class="h5 fw-bold text-dark mb-0">Baker</h3>
+                            <span class="badge bg-secondary text-light">Oct 2022 - July 2024</span>
+                        </div>
+                        <h4 class="text-muted fs-6 mb-2">Crumbl Cookie</h4>
+                        <p class="text-secondary small">Executed precision baking recipes, managed inventory, and worked collaboratively with staff to ensure smooth daily store operations.</p>
+                    </div>
+                </section>
+
+                <!-- Education Section -->
+                <section id="education">
+                    <h2 class="h3 font-serif fw-bold text-navy border-bottom pb-2 mb-4">Education</h2>
+                    
+                    <div class="education-item mb-3">
+                        <h3 class="h5 fw-bold text-dark mb-1">University of Maryland, College Park</h3>
+                        <p class="text-muted mb-0">Undergraduate Student — Currently Attending</p>
+                    </div>
+
+                    <div class="education-item mb-3">
+                        <h3 class="h5 fw-bold text-dark mb-1">Montgomery College, Germantown</h3>
+                        <p class="text-muted mb-0">Associate of Arts | Former Editor-in-Chief of Campus News (<em>The Globe</em>)</p>
+                    </div>
+
+                    <div class="education-item">
+                        <h3 class="h5 fw-bold text-dark mb-1">Watkins Mill High School</h3>
+                        <p class="text-muted mb-0">High School Graduate Alumni</p>
+                    </div>
+                </section>
+
+            </div>
+
+            <!-- RIGHT COLUMN: Skills, Publications & Awards -->
+            <div class="col-lg-4">
+                
+                <!-- Skills Section -->
+                <section id="skills" class="mb-5 p-4 bg-light rounded shadow-sm border-start border-4 border-gold">
+                    <h2 class="h4 font-serif fw-bold text-navy mb-3">Skills</h2>
+                    <ul class="list-unstyled mb-0">
+                        <li class="mb-2"><strong>Reporting:</strong> Investigative, Beat (Music & Sports), AP Style</li>
+                        <li class="mb-2"><strong>Web & Coding:</strong> HTML, CSS, Bootstrap Grid</li>
+                        <li class="mb-2"><strong>Digital Media:</strong> Figma, Adobe Creative Cloud, Audio Production (WMUC)</li>
+                        <li><strong>Editorial:</strong> Copyediting, Publishing, Interviewing</li>
+                    </ul>
+                </section>
+
+                <!-- Publications Section -->
+                <section id="portfolio" class="mb-5">
+                    <h2 class="h4 font-serif fw-bold text-navy border-bottom pb-2 mb-3">Publications</h2>
+                    <ul class="list-group list-group-flush small">
+                        <li class="list-group-item bg-transparent">The New York Post</li>
+                        <li class="list-group-item bg-transparent">La Voz Latina (UMD)</li>
+                        <li class="list-group-item bg-transparent">The Black Explosion (UMD)</li>
+                        <li class="list-group-item bg-transparent">WMUC Radio Student Broadcasts</li>
+                        <li class="list-group-item bg-transparent">The Globe (Montgomery College)</li>
+                    </ul>
+                </section>
+
+                <!-- Awards Section -->
+                <section>
+                    <h2 class="h4 font-serif fw-bold text-navy border-bottom pb-2 mb-3">Awards & Honors</h2>
+                    <ul class="list-unstyled small text-secondary">
+                        <li class="mb-2">🏆 Senator Nancy J. King Scholarship</li>
+                        <li class="mb-2">🎖️ Dean’s List Recipient</li>
+                        <li class="mb-2">⭐ Honor Roll (3x)</li>
+                        <li>🔥 Ribbon of Hard Work</li>
+                    </ul>
+                </section>
+
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Page Footer -->
+    <footer class="bg-navy text-light py-4 text-center border-top border-gold">
+        <div class="container">
+            <p class="mb-1">&copy; 2026 Xavier Serrano. All Rights Reserved.</p>
+            <p class="small text-muted mb-0">Built with HTML, Bootstrap, & Custom CSS for Merrill College</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
