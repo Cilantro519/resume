@@ -1,187 +1,39 @@
-body {
-    font-family: 'Times New Roman', Times, serif;
-    font-weight: bold;
-    color: #334155;
-    background-color: #f8fafc;
-}
-
-/* Ensure headings and badges remain crisp and readable */
-h1, h2, h3, h4, h5, h6, .navbar-brand, .badge {
-    font-family: 'Times New Roman', Times, serif;
-    font-weight: bold;
-}
-
-.font-serif {
-    font-family: 'Times New Roman', Times, serif;
-    font-weight: bold;
-}
-
-/* Color Palette Variables & Utility Classes */
-.bg-navy {
-    background-color: #0f172a !important;
-}
-
-.bg-navy-light {
-    background-color: #f1f5f9 !important;
-}
-
-.text-navy {
-    color: #0f172a !important;
-}
-
-.text-gold {
-    color: #facc15 !important;
-}
-
-.text-gold-dark {
-    color: #ca8a04 !important;
-}
-
-.bg-gold {
-    background-color: #facc15 !important;
-}
-
-/* Border Accent Colors */
-.border-gold {
-    border-color: #facc15 !important;
-}
-
-/* Page Topper & Profile Photo Styling */
-.page-topper {
-    background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
-}
-
-.profile-frame {
-    border-radius: 8px;
-    border: 2px solid #facc15;
-    transform: rotate(1deg);
-    transition: transform 0.3s ease;
-}
-
-.profile-frame:hover {
-    transform: rotate(0deg);
-}
-
-.profile-img {
-    max-height: 280px;
+.article-preview-img {
+    width: 100%;
+    max-height: 220px;
     object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, filter 0.3s ease;
 }
 
-/* Custom Buttons */
-.btn-navy {
-    background-color: #0f172a;
-    color: #ffffff;
-    border: 2px solid #0f172a;
-    transition: all 0.2s ease-in-out;
-    font-weight: bold;
+.article-preview-img:hover {
+    transform: scale(1.02);
+    filter: brightness(1.05);
 }
 
-.btn-navy:hover {
-    background-color: #1e293b;
-    color: #facc15;
-    border-color: #1e293b;
-}
-
-/* Section Styling */
-section h2 {
-    letter-spacing: -0.5px;
-}
-
-.experience-item, .education-item {
-    transition: transform 0.2s ease;
-}
-
-.experience-item:hover {
-    transform: translateX(4px);
-}
-<section id="portfolio" class="mb-5 glass-card p-4">
-    <h2 class="h4 font-serif fw-bold text-navy border-bottom pb-2 mb-3">Published Work</h2>
-    
-    <div id="articleCarousel" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner text-center py-2">
-            
-            <!-- Slide 1: The New York Post -->
-            <div class="carousel-item active">
-                <h3 class="h5 fw-bold text-navy mb-1">The New York Post</h3>
-                <p class="text-muted small mb-2">City Hall & Police Shack Investigative Reporting</p>
-                <a href="https://nypost.com/search/xavier+serrano/?se=ny" target="_blank" rel="noopener noreferrer" class="btn btn-navy btn-sm">Read Archive →</a>
-            </div>
-
-            <!-- Slide 2: La Voz Latina -->
-            <div class="carousel-item">
-                <h3 class="h5 fw-bold text-navy mb-1">La Voz Latina</h3>
-                <p class="text-muted small mb-2">Campus & Community Coverage</p>
-                <a href="https://www.lavozlatina.org/search?q=xavier+serrano" target="_blank" rel="noopener noreferrer" class="btn btn-navy btn-sm">Read Archive →</a>
-            </div>
-
-            <!-- Slide 3: The Black Explosion -->
-            <div class="carousel-item">
-                <h3 class="h5 fw-bold text-navy mb-1">The Black Explosion</h3>
-                <p class="text-muted small mb-2">Student News & Cultural Features</p>
-                <a href="https://blackexplosionnews.com/?s=xavier+serrano" target="_blank" rel="noopener noreferrer" class="btn btn-navy btn-sm">Read Archive →</a>
-            </div>
-
-        </div>
-
-        <!-- Carousel Navigation Controls -->
-        <button class="carousel-control-prev" type="button" data-bs-target="#articleCarousel" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon bg-dark rounded-circle p-2" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#articleCarousel" data-bs-slide="next">
-            <span class="carousel-control-next-icon bg-dark rounded-circle p-2" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
-    </div>
-</section>
-.glass-card {
-    background: rgba(15, 23, 42, 0.04);
-    backdrop-filter: blur(12px);
-    border: 1px solid rgba(15, 23, 42, 0.12);
-    border-radius: 16px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
-    transition: all 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
-    position: relative;
+/* Custom Accordion Styling for Publications */
+.accordion-item {
+    background: transparent !important;
+    border: 1px solid rgba(15, 23, 42, 0.12) !important;
+    border-radius: 10px !important;
+    margin-bottom: 12px;
     overflow: hidden;
 }
 
-/* Floating Elevation Hover Effect */
-.glass-card:hover {
-    transform: translateY(-8px) scale(1.01);
-    box-shadow: 0 20px 45px rgba(15, 23, 42, 0.15);
-    border-color: #facc15; /* Interactive Gold Glow */
-}
-
-/* Interactive Border Item Hover for Education & Experience */
-.interactive-item {
-    padding: 12px 16px;
-    border-left: 4px solid #0f172a;
-    border-radius: 6px;
-    background: rgba(255, 255, 255, 0.5);
+.accordion-button {
+    background: rgba(255, 255, 255, 0.6) !important;
+    color: #0f172a !important;
+    font-weight: 700;
     transition: all 0.3s ease;
 }
 
-.interactive-item:hover {
-    border-left-color: #facc15;
-    background: rgba(250, 204, 21, 0.08);
-    transform: translateX(6px);
+.accordion-button:not(.collapsed) {
+    background: rgba(250, 204, 21, 0.15) !important;
+    color: #0f172a !important;
+    box-shadow: none !important;
 }
 
-/* School Logos */
-.school-logo {
-    width: 48px;
-    height: 48px;
-    object-fit: contain;
-    border-radius: 8px;
-    background: #ffffff;
-    padding: 4px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-
-/* Bolder Accolades / Awards Styling */
-.accolade-bold {
-    font-weight: 800 !important;
-    font-size: 0.98rem;
-    letter-spacing: -0.2px;
-    color: #0f172a;
+.accordion-button::after {
+    filter: brightness(0.2);
 }
