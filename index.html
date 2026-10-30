@@ -37,7 +37,7 @@
     <section id="about" class="bg-light py-5 border-bottom">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-md-8">
+                <div class="col-md-10 col-lg-8">
                     <h2 class="display-6 font-serif fw-bold text-navy mb-2">Reporter & Editorial Specialist</h2>
                     <p class="lead text-secondary">Philip Merrill College of Journalism | University of Maryland, College Park</p>
                     <p class="text-dark"><strong>Career Objective:</strong> Always willing and ready to learn. My work ethic shows I can effectively articulate as well as converse with any kind of audience and coordinate collaborative efforts with others.</p>
@@ -149,7 +149,7 @@
 
             </div>
 
-            <!-- RIGHT COLUMN: Skills, Publications & Accolades -->
+            <!-- RIGHT COLUMN: Skills, Interactive Article Showcase & Accolades -->
             <div class="col-lg-4">
                 
                 <!-- Skills Section -->
@@ -163,51 +163,80 @@
                     </ul>
                 </section>
 
-                <!-- Interactive Article Slideshow -->
+                <!-- Interactive Article Dropdown Accordion Showcase -->
                 <section id="portfolio" class="mb-4 glass-card p-4">
-                    <h2 class="h4 font-serif fw-bold text-navy border-bottom pb-2 mb-3"><i class="bi bi-newspaper text-gold me-2"></i>Published Work</h2>
-                    
-                    <div id="articleCarousel" class="carousel slide" data-bs-ride="carousel">
-                        <div class="carousel-inner text-center py-2">
-                            
-                            <div class="carousel-item active">
-                                <h3 class="h5 fw-bold text-navy mb-1">The New York Post</h3>
-                                <p class="text-muted small mb-2">City Hall & Police Shack Investigative Reporting</p>
-                                <a href="https://nypost.com/search/xavier+serrano/?se=ny" target="_blank" rel="noopener noreferrer" class="btn btn-navy btn-sm">Read Archive →</a>
-                            </div>
+                    <h2 class="h4 font-serif fw-bold text-navy border-bottom pb-2 mb-3"><i class="bi bi-journal-album text-gold me-2"></i>Published Work</h2>
+                    <p class="text-muted small mb-3">Click below to drop down article previews & archives:</p>
 
-                            <div class="carousel-item">
-                                <h3 class="h5 fw-bold text-navy mb-1">La Voz Latina</h3>
-                                <p class="text-muted small mb-2">UMD Campus & Community Coverage</p>
-                                <a href="https://www.lavozlatina.org/search?q=xavier+serrano" target="_blank" rel="noopener noreferrer" class="btn btn-navy btn-sm">Read Archive →</a>
+                    <div class="accordion" id="portfolioAccordion">
+                        
+                        <!-- Article 1: The Black Explosion -->
+                        <div class="accordion-item">
+                            <h3 class="accordion-header" id="headingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    <i class="bi bi-music-note-beamed me-2 text-primary"></i>The Black Explosion
+                                </button>
+                            </h3>
+                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#portfolioAccordion">
+                                <div class="accordion-body text-center p-3">
+                                    <img src="be-article-screenshot.png" alt="The Black Explosion Article - DROMAG" class="article-preview-img mb-3" onerror="this.src='https://via.placeholder.com/400x200?text=The+Black+Explosion+Archive'">
+                                    <h4 class="h6 fw-bold text-dark mb-1">DROMAG: The Underground EP That You've Never Heard Of</h4>
+                                    <p class="text-muted small mb-2">Music & Cultural Feature | Oct 2025</p>
+                                    <a href="https://blackexplosionnews.com/?s=xavier+serrano" target="_blank" rel="noopener noreferrer" class="btn btn-navy btn-sm w-100">Read Article Archive →</a>
+                                </div>
                             </div>
-
-                            <div class="carousel-item">
-                                <h3 class="h5 fw-bold text-navy mb-1">The Black Explosion</h3>
-                                <p class="text-muted small mb-2">UMD Student News & Cultural Features</p>
-                                <a href="https://blackexplosionnews.com/?s=xavier+serrano" target="_blank" rel="noopener noreferrer" class="btn btn-navy btn-sm">Read Archive →</a>
-                            </div>
-
-                            <div class="carousel-item">
-                                <h3 class="h5 fw-bold text-navy mb-1">WMUC Radio</h3>
-                                <p class="text-muted small mb-2">Student Radio Broadcasts & Audio Features</p>
-                                <a href="#" class="btn btn-navy btn-sm">Listen / View →</a>
-                            </div>
-
-                            <div class="carousel-item">
-                                <h3 class="h5 fw-bold text-navy mb-1">The Globe</h3>
-                                <p class="text-muted small mb-2">Montgomery College Campus News</p>
-                                <a href="#" class="btn btn-navy btn-sm">Read Archive →</a>
-                            </div>
-
                         </div>
 
-                        <button class="carousel-control-prev" type="button" data-bs-target="#articleCarousel" data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon bg-dark rounded-circle p-2" aria-hidden="true"></span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#articleCarousel" data-bs-slide="next">
-                            <span class="carousel-control-next-icon bg-dark rounded-circle p-2" aria-hidden="true"></span>
-                        </button>
+                        <!-- Article 2: The New York Post -->
+                        <div class="accordion-item">
+                            <h3 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    <i class="bi bi-newspaper me-2 text-danger"></i>The New York Post
+                                </button>
+                            </h3>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#portfolioAccordion">
+                                <div class="accordion-body text-center p-3">
+                                    <img src="nypost-search-screenshot.jpg" alt="New York Post Investigative Articles" class="article-preview-img mb-3" onerror="this.src='https://via.placeholder.com/400x200?text=New+York+Post+Archive'">
+                                    <h4 class="h6 fw-bold text-dark mb-1">City Hall & Police Shack Investigations</h4>
+                                    <p class="text-muted small mb-2">38 Published National Reporting Features</p>
+                                    <a href="https://nypost.com/search/xavier+serrano/?se=ny" target="_blank" rel="noopener noreferrer" class="btn btn-navy btn-sm w-100">Read Archive →</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Article 3: La Voz Latina -->
+                        <div class="accordion-item">
+                            <h3 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    <i class="bi bi-globe me-2 text-warning"></i>La Voz Latina
+                                </button>
+                            </h3>
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#portfolioAccordion">
+                                <div class="accordion-body text-center p-3">
+                                    <img src="lavoz-search-screenshot.jpg" alt="La Voz Latina Articles" class="article-preview-img mb-3" onerror="this.src='https://via.placeholder.com/400x200?text=La+Voz+Latina+Archive'">
+                                    <h4 class="h6 fw-bold text-dark mb-1">Campus & Music Feature Coverage</h4>
+                                    <p class="text-muted small mb-2">40 Published Articles | Combat Sports & Music</p>
+                                    <a href="https://www.lavozlatina.org/search?q=xavier+serrano" target="_blank" rel="noopener noreferrer" class="btn btn-navy btn-sm w-100">Read Archive →</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Article 4: WMUC Radio -->
+                        <div class="accordion-item">
+                            <h3 class="accordion-header" id="headingFour">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                    <i class="bi bi-broadcast me-2 text-info"></i>WMUC Radio
+                                </button>
+                            </h3>
+                            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#portfolioAccordion">
+                                <div class="accordion-body text-center p-3">
+                                    <h4 class="h6 fw-bold text-dark mb-1">Student Radio Broadcasts & Audio Features</h4>
+                                    <p class="text-muted small mb-2">Audio Journalism & Live Coverage</p>
+                                    <a href="http://wmuc.umd.edu/" target="_blank" rel="noopener noreferrer" class="btn btn-navy btn-sm w-100">Listen / Broadcasts →</a>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </section>
 
@@ -237,6 +266,6 @@
     </footer>
 
     <!-- Bootstrap 5 JS Bundle -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.bundle.min.css"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
