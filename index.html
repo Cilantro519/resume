@@ -7,14 +7,14 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <!-- Google Font: Merriweather (Bold New Roman Editorial Look) -->
+    <!-- Google Font: Merriweather -->
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;0,900;1,300&display=swap" rel="stylesheet">
-    <!-- Custom Stylesheet (Linked BELOW Bootstrap) -->
+    <!-- Custom Stylesheet -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Responsive Bootstrap Navigation Menu -->
+    <!-- Bootstrap Navigation Menu -->
     <nav class="navbar navbar-expand-lg navbar-custom sticky-top">
         <div class="container">
             <a class="navbar-brand" href="#about">Xavier Serrano</a>
@@ -33,16 +33,17 @@
         </div>
     </nav>
 
-    <!-- Page Topper / Hero Section -->
-    <section id="about" class="bg-white py-5 border-bottom shadow-sm">
-        <div class="container">
+    <!-- Page Topper / Cosmic Space Hero Section -->
+    <section id="about" class="cosmic-header py-5 shadow-sm">
+        <canvas id="starCanvas" class="cosmic-canvas"></canvas>
+        <div class="container cosmic-content">
             <div class="row align-items-center">
                 <div class="col-lg-10">
-                    <h1 class="display-5 fw-bold text-navy mb-2">Xavier Serrano</h1>
-                    <p class="h4 text-secondary mb-3">Reporter & Editorial Specialist</p>
-                    <p class="lead text-dark fs-6">Philip Merrill College of Journalism | University of Maryland, College Park</p>
-                    <p class="text-secondary small"><strong>Career Objective:</strong> Always willing and ready to learn. My work ethic shows I can effectively articulate as well as converse with any kind of audience and coordinate collaborative efforts with others.</p>
-                    <div class="d-flex flex-wrap gap-3 mt-3 text-muted small">
+                    <h1 class="display-5 fw-bold gold-glow-text mb-2">Xavier Serrano</h1>
+                    <p class="h4 text-light mb-3">Reporter & Editorial Specialist</p>
+                    <p class="lead text-white-50 fs-6">Philip Merrill College of Journalism | University of Maryland, College Park</p>
+                    <p class="text-light small"><strong>Career Objective:</strong> Always willing and ready to learn. My work ethic shows I can effectively articulate as well as converse with any kind of audience and coordinate collaborative efforts with others.</p>
+                    <div class="d-flex flex-wrap gap-3 mt-3 text-white-50 small">
                         <span><i class="bi bi-geo-alt-fill text-warning me-1"></i>106 Duvall Ln, Gaithersburg, MD 20877</span>
                         <span><i class="bi bi-telephone-fill text-warning me-1"></i>(240) 801-1532</span>
                         <span><i class="bi bi-envelope-fill text-warning me-1"></i>413289@gmail.com</span>
@@ -52,7 +53,7 @@
         </div>
     </section>
 
-    <!-- Main Content Container using Bootstrap Grid -->
+    <!-- Main Content Container -->
     <main class="container my-5">
         <div class="row g-4">
             
@@ -156,7 +157,7 @@
                     </ul>
                 </section>
 
-                <!-- Published Work / Publications Accordion -->
+                <!-- Publications Accordion -->
                 <section id="portfolio" class="glass-card p-4">
                     <h2 class="h4 fw-bold text-navy border-bottom pb-2 mb-3"><i class="bi bi-journal-album text-warning me-2"></i>Publications</h2>
                     <p class="text-muted small mb-3">Click to view article previews & archives:</p>
@@ -256,5 +257,48 @@
 
     <!-- Bootstrap 5 JS Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Cosmic Star Generator Script -->
+    <script>
+        const canvas = document.getElementById('starCanvas');
+        const ctx = canvas.getContext('2d');
+        let stars = [];
+
+        function resizeCanvas() {
+            canvas.width = canvas.parentElement.offsetWidth;
+            canvas.height = canvas.parentElement.offsetHeight;
+        }
+
+        function createStars() {
+            stars = [];
+            for (let i = 0; i < 60; i++) {
+                stars.push({
+                    x: Math.random() * canvas.width,
+                    y: Math.random() * canvas.height,
+                    radius: Math.random() * 1.5,
+                    alpha: Math.random(),
+                    speed: Math.random() * 0.02 + 0.005
+                });
+            }
+        }
+
+        function animateStars() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            stars.forEach(star => {
+                star.alpha += star.speed;
+                if (star.alpha > 1 || star.alpha < 0) star.speed = -star.speed;
+                ctx.fillStyle = `rgba(255, 255, 255, ${Math.abs(star.alpha)})`;
+                ctx.beginPath();
+                ctx.arc(star.x, star.y, star.radius, 0, Math.PI * 2);
+                ctx.fill();
+            });
+            requestAnimationFrame(animateStars);
+        }
+
+        window.addEventListener('resize', () => { resizeCanvas(); createStars(); });
+        resizeCanvas();
+        createStars();
+        animateStars();
+    </script>
 </body>
 </html>
