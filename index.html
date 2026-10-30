@@ -5,53 +5,54 @@
     <title>Xavier Serrano | Journalism Portfolio</title>
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Bootstrap Icons CDN -->
+    <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <!-- Google Fonts: Merriweather for Bold New Roman Look -->
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;0,900;1,300;1,700&display=swap" rel="stylesheet">
-    <!-- Custom CSS -->
+    <!-- Google Font: Merriweather (Bold New Roman Editorial Look) -->
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;0,900;1,300&display=swap" rel="stylesheet">
+    <!-- Custom Stylesheet (Linked BELOW Bootstrap) -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Sticky Navigation Header -->
-    <header class="bg-navy text-light py-4 shadow-sm sticky-top">
-        <div class="container d-flex justify-content-between align-items-center">
-            <div>
-                <h1 class="h3 font-serif mb-0 text-gold fw-bold">Xavier Serrano</h1>
-                <p class="small text-white-50 mb-0">Journalist & Digital Content Creator</p>
-            </div>
-            <nav>
-                <ul class="nav">
-                    <li class="nav-item"><a href="#about" class="nav-link text-light px-2">About</a></li>
-                    <li class="nav-item"><a href="#experience" class="nav-link text-light px-2">Experience</a></li>
-                    <li class="nav-item"><a href="#education" class="nav-link text-light px-2">Education</a></li>
-                    <li class="nav-item"><a href="#skills" class="nav-link text-light px-2">Skills</a></li>
-                    <li class="nav-item"><a href="#portfolio" class="nav-link text-light px-2">Publications</a></li>
+    <!-- Responsive Bootstrap Navigation Menu -->
+    <nav class="navbar navbar-expand-lg navbar-custom sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#about">Xavier Serrano</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#portfolio">Publications</a></li>
                 </ul>
-            </nav>
+            </div>
         </div>
-    </header>
+    </nav>
 
-    <!-- Hero / Profile Section -->
-    <section id="about" class="bg-light py-5 border-bottom fade-in-section">
+    <!-- Page Topper / Hero Section -->
+    <section id="about" class="bg-white py-5 border-bottom shadow-sm">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-md-10 col-lg-8">
-                    <h2 class="display-6 font-serif fw-bold text-navy mb-2">Reporter & Editorial Specialist</h2>
-                    <p class="lead text-secondary">Philip Merrill College of Journalism | University of Maryland, College Park</p>
-                    <p class="text-dark"><strong>Career Objective:</strong> Always willing and ready to learn. My work ethic shows I can effectively articulate as well as converse with any kind of audience and coordinate collaborative efforts with others.</p>
+                <div class="col-lg-10">
+                    <h1 class="display-5 fw-bold text-navy mb-2">Xavier Serrano</h1>
+                    <p class="h4 text-secondary mb-3">Reporter & Editorial Specialist</p>
+                    <p class="lead text-dark fs-6">Philip Merrill College of Journalism | University of Maryland, College Park</p>
+                    <p class="text-secondary small"><strong>Career Objective:</strong> Always willing and ready to learn. My work ethic shows I can effectively articulate as well as converse with any kind of audience and coordinate collaborative efforts with others.</p>
                     <div class="d-flex flex-wrap gap-3 mt-3 text-muted small">
-                        <span><i class="bi bi-geo-alt-fill text-gold me-1"></i>106 Duvall Ln, Gaithersburg, MD 20877</span>
-                        <span><i class="bi bi-telephone-fill text-gold me-1"></i>(240) 801-1532</span>
-                        <span><i class="bi bi-envelope-fill text-gold me-1"></i>413289@gmail.com</span>
+                        <span><i class="bi bi-geo-alt-fill text-warning me-1"></i>106 Duvall Ln, Gaithersburg, MD 20877</span>
+                        <span><i class="bi bi-telephone-fill text-warning me-1"></i>(240) 801-1532</span>
+                        <span><i class="bi bi-envelope-fill text-warning me-1"></i>413289@gmail.com</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Main Content Grid -->
+    <!-- Main Content Container using Bootstrap Grid -->
     <main class="container my-5">
         <div class="row g-4">
             
@@ -59,8 +60,8 @@
             <div class="col-lg-8">
                 
                 <!-- Experience Section -->
-                <section id="experience" class="mb-4 glass-card p-4 fade-in-section">
-                    <h2 class="h3 font-serif fw-bold text-navy border-bottom pb-2 mb-4"><i class="bi bi-briefcase-fill text-gold me-2"></i>Experience</h2>
+                <section id="experience" class="glass-card p-4">
+                    <h2 class="h3 fw-bold text-navy border-bottom pb-2 mb-4"><i class="bi bi-briefcase-fill text-warning me-2"></i>Experience</h2>
                     
                     <!-- The New York Post -->
                     <div class="experience-item interactive-item mb-4">
@@ -68,13 +69,12 @@
                             <h3 class="h5 fw-bold text-dark mb-0">News Reporter Intern</h3>
                             <span class="badge bg-warning text-dark">June 2026 - Aug 2026</span>
                         </div>
-                        <h4 class="text-navy fs-6 mb-2">The New York Post | 1211 Avenue of the Americas, New York, NY</h4>
+                        <h4 class="text-navy fs-6 mb-2">The New York Post | New York, NY</h4>
                         <ul class="text-secondary small mb-0 ps-3">
-                            <li>Provided insightful, fast-turnaround reporting on an array of major breaking news events.</li>
-                            <li>Gained crucial information through interviews with government officials, public figures, and local community members.</li>
-                            <li>Worked effectively inside City Hall and the Police Shack on beat reporting assignments.</li>
-                            <li>Assisted senior investigative reporters with ground reporting, door-knocks, and field interviews.</li>
-                            <li>Authored and published original articles for the national media publication.</li>
+                            <li>Provided insightful, fast-turnaround reporting on breaking news events.</li>
+                            <li>Conducted interviews with public figures, government officials, and community members.</li>
+                            <li>Worked on beat assignments inside City Hall and the Police Shack.</li>
+                            <li>Assisted senior investigative reporters with ground reporting and door-knocks.</li>
                         </ul>
                     </div>
 
@@ -87,14 +87,9 @@
                         <h4 class="text-navy fs-6 mb-2">Potbelly Sandwich Shop | Gaithersburg, MD</h4>
                         <p class="badge bg-warning text-dark mb-2">⭐ Longest-Serving Employee at Potbelly's</p>
                         <ul class="text-secondary small mb-0 ps-3">
-                            <li>Welcomed walk-in customers with a cooperative, warm attitude in a fast-paced environment.</li>
-                            <li>Handcrafted custom order sandwiches based on precise customer specifications and dietary instructions.</li>
-                            <li>Maintained inventory logs, restocked food lines (meats, cheeses, chips, cooler), and conducted freezer cleaning services.</li>
-                            <li>Assisted with high-volume catering orders, sandwich preparation, loading customer vehicles, and cashiering.</li>
-                            <li>Reviewed and resolved customer feedback and complaints alongside store management.</li>
-                            <li>Participated in shift team meetings, sharing actionable customer feedback with store managers.</li>
-                            <li>Operated cash registers and followed exact cash management and accounting procedures.</li>
-                            <li>Earned consistently excellent performance reviews and positive supervisor feedback for exceptional work ethic.</li>
+                            <li>Welcomed walk-in customers and handcrafted custom order sandwiches.</li>
+                            <li>Maintained inventory logs, restocked food lines, and conducted store maintenance.</li>
+                            <li>Handled high-volume catering orders, cashiering, and customer relations.</li>
                         </ul>
                     </div>
 
@@ -106,40 +101,38 @@
                         </div>
                         <h4 class="text-navy fs-6 mb-2">Crumbl Cookie | Gaithersburg, MD</h4>
                         <ul class="text-secondary small mb-0 ps-3">
-                            <li>Mixed doughs and prepared fresh batches of high-quality baked goods adhering to strict recipes.</li>
-                            <li>Operated the point-of-sale register while assisting customers with inquiries and special orders.</li>
-                            <li>Cleaned, sanitized, and maintained specialized kitchen machinery and overall store cleanliness.</li>
-                            <li>Managed daily inventory tracking and stocked walk-in freezers during morning truck order intake.</li>
-                            <li>Collaborated with shift associate teams during meetings to ensure smooth store operational workflow.</li>
+                            <li>Prepared fresh batches of baked goods adhering to strict recipes.</li>
+                            <li>Operated POS registers and assisted customers with special orders.</li>
+                            <li>Managed daily inventory tracking and maintained kitchen cleanliness.</li>
                         </ul>
                     </div>
                 </section>
 
                 <!-- Education Section -->
-                <section id="education" class="glass-card p-4 fade-in-section">
-                    <h2 class="h3 font-serif fw-bold text-navy border-bottom pb-2 mb-4"><i class="bi bi-mortarboard-fill text-gold me-2"></i>Education</h2>
+                <section id="education" class="glass-card p-4">
+                    <h2 class="h3 fw-bold text-navy border-bottom pb-2 mb-4"><i class="bi bi-mortarboard-fill text-warning me-2"></i>Education</h2>
                     
                     <!-- UMD -->
                     <div class="education-item interactive-item d-flex align-items-center gap-3 mb-3">
-                        <div class="school-logo-badge bg-danger text-white fw-bold d-flex align-items-center justify-content-center rounded shadow-sm flex-shrink-0" style="width: 52px; height: 52px; font-size: 14px;">UMD</div>
+                        <div class="bg-danger text-white fw-bold d-flex align-items-center justify-content-center rounded flex-shrink-0" style="width: 50px; height: 50px; font-size: 13px;">UMD</div>
                         <div>
                             <h3 class="h5 fw-bold text-dark mb-1">University of Maryland, College Park</h3>
-                            <p class="text-muted small mb-0">Undergraduate Student — Philip Merrill College of Journalism (Currently Attending)</p>
+                            <p class="text-muted small mb-0">Undergraduate Student — Philip Merrill College of Journalism</p>
                         </div>
                     </div>
 
-                    <!-- Montgomery College (Purple) -->
+                    <!-- Montgomery College -->
                     <div class="education-item interactive-item d-flex align-items-center gap-3 mb-3">
-                        <div class="school-logo-badge text-white fw-bold d-flex align-items-center justify-content-center rounded shadow-sm flex-shrink-0" style="width: 52px; height: 52px; font-size: 14px; background-color: #6f42c1;">MC</div>
+                        <div class="text-white fw-bold d-flex align-items-center justify-content-center rounded flex-shrink-0" style="width: 50px; height: 50px; font-size: 13px; background-color: #6f42c1;">MC</div>
                         <div>
                             <h3 class="h5 fw-bold text-dark mb-1">Montgomery College, Germantown</h3>
-                            <p class="text-muted small mb-0">Associate of Arts (2022 - 2024) | Former Editor-in-Chief of Campus Newspaper (<em>The Globe</em>)</p>
+                            <p class="text-muted small mb-0">Associate of Arts (2022 - 2024) | Former Editor-in-Chief (<em>The Globe</em>)</p>
                         </div>
                     </div>
 
-                    <!-- Watkins Mill High School (Orange & Blue) -->
+                    <!-- Watkins Mill High School -->
                     <div class="education-item interactive-item d-flex align-items-center gap-3">
-                        <div class="school-logo-badge text-white fw-bold d-flex align-items-center justify-content-center rounded shadow-sm flex-shrink-0" style="width: 52px; height: 52px; font-size: 12px; background: linear-gradient(135deg, #ff7f00 50%, #003366 50%);">WMHS</div>
+                        <div class="text-white fw-bold d-flex align-items-center justify-content-center rounded flex-shrink-0" style="width: 50px; height: 50px; font-size: 11px; background: linear-gradient(135deg, #ff7f00 50%, #003366 50%);">WMHS</div>
                         <div>
                             <h3 class="h5 fw-bold text-dark mb-1">Watkins Mill High School</h3>
                             <p class="text-muted small mb-0">High School Graduate Alumni (Sept 2021 - June 2022)</p>
@@ -149,13 +142,13 @@
 
             </div>
 
-            <!-- RIGHT COLUMN: Skills, Interactive Article Showcase & Accolades -->
+            <!-- RIGHT COLUMN: Skills, Publications & Accolades -->
             <div class="col-lg-4">
                 
                 <!-- Skills Section -->
-                <section id="skills" class="mb-4 glass-card p-4 border-start border-4 border-warning fade-in-section">
-                    <h2 class="h4 font-serif fw-bold text-navy mb-3"><i class="bi bi-cpu-fill text-gold me-2"></i>Skills</h2>
-                    <ul class="list-unstyled mb-0">
+                <section id="skills" class="glass-card p-4 border-start border-4 border-warning">
+                    <h2 class="h4 fw-bold text-navy mb-3"><i class="bi bi-cpu-fill text-warning me-2"></i>Skills</h2>
+                    <ul class="list-unstyled mb-0 small">
                         <li class="mb-2"><strong>Reporting:</strong> Investigative, Beat (Music & Sports), AP Style</li>
                         <li class="mb-2"><strong>Web & Coding:</strong> HTML, CSS, Bootstrap Grid</li>
                         <li class="mb-2"><strong>Digital Media:</strong> Figma, Adobe Creative Cloud, Audio Production</li>
@@ -163,14 +156,14 @@
                     </ul>
                 </section>
 
-                <!-- Interactive Article Dropdown Accordion Showcase -->
-                <section id="portfolio" class="mb-4 glass-card p-4 fade-in-section">
-                    <h2 class="h4 font-serif fw-bold text-navy border-bottom pb-2 mb-3"><i class="bi bi-journal-album text-gold me-2"></i>Published Work</h2>
-                    <p class="text-muted small mb-3">Click below to drop down article previews & archives:</p>
+                <!-- Published Work / Publications Accordion -->
+                <section id="portfolio" class="glass-card p-4">
+                    <h2 class="h4 fw-bold text-navy border-bottom pb-2 mb-3"><i class="bi bi-journal-album text-warning me-2"></i>Publications</h2>
+                    <p class="text-muted small mb-3">Click to view article previews & archives:</p>
 
                     <div class="accordion" id="portfolioAccordion">
                         
-                        <!-- Article 1: The Black Explosion -->
+                        <!-- The Black Explosion -->
                         <div class="accordion-item">
                             <h3 class="accordion-header" id="headingOne">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
@@ -179,15 +172,14 @@
                             </h3>
                             <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#portfolioAccordion">
                                 <div class="accordion-body text-center p-3">
-                                    <img src="be-article-screenshot.png" alt="The Black Explosion Article - DROMAG" class="article-preview-img mb-3">
-                                    <h4 class="h6 fw-bold text-dark mb-1">DROMAG: The Underground EP That You've Never Heard Of</h4>
-                                    <p class="text-muted small mb-2">Music & Cultural Feature | Oct 2025</p>
-                                    <a href="https://blackexplosionnews.com/?s=xavier+serrano" target="_blank" rel="noopener noreferrer" class="btn btn-navy btn-sm w-100">Read Article Archive →</a>
+                                    <img src="be-article-screenshot.png" alt="The Black Explosion Article Preview" class="article-preview-img mb-3">
+                                    <h4 class="h6 fw-bold text-dark mb-1">DROMAG: The Underground EP</h4>
+                                    <a href="https://blackexplosionnews.com/?s=xavier+serrano" target="_blank" rel="noopener noreferrer" class="btn btn-dark btn-sm w-100">Read Archive →</a>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Article 2: The New York Post -->
+                        <!-- The New York Post -->
                         <div class="accordion-item">
                             <h3 class="accordion-header" id="headingTwo">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
@@ -196,15 +188,14 @@
                             </h3>
                             <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#portfolioAccordion">
                                 <div class="accordion-body text-center p-3">
-                                    <img src="nypost-search-screenshot.jpg" alt="New York Post Investigative Articles" class="article-preview-img mb-3">
-                                    <h4 class="h6 fw-bold text-dark mb-1">City Hall & Police Shack Investigations</h4>
-                                    <p class="text-muted small mb-2">38 Published National Reporting Features</p>
-                                    <a href="https://nypost.com/search/xavier+serrano/?se=ny" target="_blank" rel="noopener noreferrer" class="btn btn-navy btn-sm w-100">Read Archive →</a>
+                                    <img src="nypost-search-screenshot.jpg" alt="New York Post Article Preview" class="article-preview-img mb-3">
+                                    <h4 class="h6 fw-bold text-dark mb-1">City Hall & Investigations</h4>
+                                    <a href="https://nypost.com/search/xavier+serrano/?se=ny" target="_blank" rel="noopener noreferrer" class="btn btn-dark btn-sm w-100">Read Archive →</a>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Article 3: La Voz Latina -->
+                        <!-- La Voz Latina -->
                         <div class="accordion-item">
                             <h3 class="accordion-header" id="headingThree">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
@@ -213,15 +204,14 @@
                             </h3>
                             <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#portfolioAccordion">
                                 <div class="accordion-body text-center p-3">
-                                    <img src="lavoz-search-screenshot.jpg" alt="La Voz Latina Articles" class="article-preview-img mb-3">
-                                    <h4 class="h6 fw-bold text-dark mb-1">Campus & Music Feature Coverage</h4>
-                                    <p class="text-muted small mb-2">40 Published Articles | Combat Sports & Music</p>
-                                    <a href="https://www.lavozlatina.org/search?q=xavier+serrano" target="_blank" rel="noopener noreferrer" class="btn btn-navy btn-sm w-100">Read Archive →</a>
+                                    <img src="lavoz-search-screenshot.jpg" alt="La Voz Latina Article Preview" class="article-preview-img mb-3">
+                                    <h4 class="h6 fw-bold text-dark mb-1">Campus & Music Features</h4>
+                                    <a href="https://www.lavozlatina.org/search?q=xavier+serrano" target="_blank" rel="noopener noreferrer" class="btn btn-dark btn-sm w-100">Read Archive →</a>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Article 4: WMUC Radio -->
+                        <!-- WMUC Radio -->
                         <div class="accordion-item">
                             <h3 class="accordion-header" id="headingFour">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
@@ -230,10 +220,9 @@
                             </h3>
                             <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#portfolioAccordion">
                                 <div class="accordion-body text-center p-3">
-                                    <img src="wmuc-screenshot.png" alt="WMUC Radio Broadcasts" class="article-preview-img mb-3">
-                                    <h4 class="h6 fw-bold text-dark mb-1">Student Radio Broadcasts & Audio Features</h4>
-                                    <p class="text-muted small mb-2">Audio Journalism & Live Coverage</p>
-                                    <a href="http://wmuc.umd.edu/" target="_blank" rel="noopener noreferrer" class="btn btn-navy btn-sm w-100">Listen / Broadcasts →</a>
+                                    <img src="wmuc-screenshot.png" alt="WMUC Radio Preview" class="article-preview-img mb-3">
+                                    <h4 class="h6 fw-bold text-dark mb-1">Student Broadcasts & Audio</h4>
+                                    <a href="http://wmuc.umd.edu/" target="_blank" rel="noopener noreferrer" class="btn btn-dark btn-sm w-100">Listen / Broadcasts →</a>
                                 </div>
                             </div>
                         </div>
@@ -242,15 +231,14 @@
                 </section>
 
                 <!-- Awards & Honors -->
-                <section class="glass-card p-4 fade-in-section">
-                    <h2 class="h4 font-serif fw-bold text-navy border-bottom pb-2 mb-3"><i class="bi bi-award-fill text-gold me-2"></i>Awards & Honors</h2>
-                    <ul class="list-unstyled mb-0">
-                        <li class="mb-2 interactive-item accolade-bold">🎓 Associate of Arts Degree</li>
-                        <li class="mb-2 interactive-item accolade-bold">📜 High School Diploma</li>
-                        <li class="mb-2 interactive-item accolade-bold">🏆 Senator Nancy J. King Scholarship</li>
-                        <li class="mb-2 interactive-item accolade-bold">🎖️ Dean’s List Recipient</li>
-                        <li class="mb-2 interactive-item accolade-bold">⭐ Honor Roll (3x)</li>
-                        <li class="interactive-item accolade-bold">🔥 Ribbon of Hard Work</li>
+                <section class="glass-card p-4">
+                    <h2 class="h4 fw-bold text-navy border-bottom pb-2 mb-3"><i class="bi bi-award-fill text-warning me-2"></i>Awards & Honors</h2>
+                    <ul class="list-unstyled mb-0 small">
+                        <li class="mb-2 interactive-item fw-bold text-navy">🎓 Associate of Arts Degree</li>
+                        <li class="mb-2 interactive-item fw-bold text-navy">📜 High School Diploma</li>
+                        <li class="mb-2 interactive-item fw-bold text-navy">🏆 Senator Nancy J. King Scholarship</li>
+                        <li class="mb-2 interactive-item fw-bold text-navy">🎖️ Dean’s List Recipient</li>
+                        <li class="interactive-item fw-bold text-navy">⭐ Honor Roll (3x)</li>
                     </ul>
                 </section>
 
@@ -259,7 +247,7 @@
         </div>
     </main>
 
-    <!-- Footer -->
+    <!-- Page Footer -->
     <footer class="bg-navy text-light py-4 mt-5 border-top border-warning">
         <div class="container text-center">
             <p class="small mb-0">&copy; 2026 Xavier Serrano. All Rights Reserved. | Philip Merrill College of Journalism</p>
@@ -268,29 +256,5 @@
 
     <!-- Bootstrap 5 JS Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Scroll Motion Animation Script -->
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const observerOptions = {
-                root: null,
-                rootMargin: '0px',
-                threshold: 0.15
-            };
-
-            const observer = new IntersectionObserver((entries, observer) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('is-visible');
-                        observer.unobserve(entry.target);
-                    }
-                });
-            }, observerOptions);
-
-            document.querySelectorAll('.fade-in-section').forEach(section => {
-                observer.observe(section);
-            });
-        });
-    </script>
 </body>
 </html>
