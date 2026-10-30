@@ -1,56 +1,25 @@
-.article-preview-img {
-    width: 100%;
-    max-height: 220px;
-    object-fit: cover;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    transition: transform 0.3s ease, filter 0.3s ease;
-}
-
-.article-preview-img:hover {
-    transform: scale(1.02);
-    filter: brightness(1.05);
-}
-
-/* Custom Accordion Styling for Publications */
-.accordion-item {
-    background: transparent !important;
-    border: 1px solid rgba(15, 23, 42, 0.12) !important;
-    border-radius: 10px !important;
-    margin-bottom: 12px;
-    overflow: hidden;
-}
-
-.accordion-button {
-    background: rgba(255, 255, 255, 0.6) !important;
-    color: #0f172a !important;
-    font-weight: 700;
-    transition: all 0.3s ease;
-}
-
-.accordion-button:not(.collapsed) {
-    background: rgba(250, 204, 21, 0.15) !important;
-    color: #0f172a !important;
-    box-shadow: none !important;
-}
-
-.accordion-button::after {
-    filter: brightness(0.2);
-}:root {
+:root {
     --navy-blue: #0f172a;
     --gold-accent: #facc15;
-    --light-glass: rgba(255, 255, 255, 0.9);
+    --light-glass: rgba(255, 255, 255, 0.92);
 }
 
-/* Global Serif Font / New Roman Editorial Look */
+/* Smooth Scrolling across the entire page */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
+/* Global Serif Font / Bold New Roman Editorial Look */
 body {
     font-family: 'Merriweather', 'Times New Roman', serif;
     color: #1e293b;
     background-color: #f8fafc;
     font-weight: 300;
+    line-height: 1.6;
 }
 
-/* Bold Serif Headings */
+/* Bold Serif Typography */
 h1, h2, h3, h4, h5, h6, .font-serif {
     font-family: 'Merriweather', 'Times New Roman', serif !important;
     font-weight: 700 !important;
@@ -78,68 +47,82 @@ h1, h2, h3, h4, h5, h6, .font-serif {
     border: none;
     font-weight: 700;
     font-family: 'Merriweather', serif;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .btn-navy:hover {
     background-color: #1e293b;
     color: var(--gold-accent);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.25);
 }
 
-/* Glassmorphism Cards */
+/* Glassmorphism Section Cards */
 .glass-card {
     background: var(--light-glass);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(15, 23, 42, 0.1);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(15, 23, 42, 0.08);
     border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Hover Floating Effect */
+.glass-card:hover {
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* Smooth Interactive Item Hover Lift */
 .interactive-item {
-    transition: transform 0.2s ease, background 0.2s ease;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
     border-radius: 8px;
-    padding: 6px;
+    padding: 8px;
 }
 
 .interactive-item:hover {
-    transform: translateY(-2px);
-    background: rgba(241, 245, 249, 0.9);
+    transform: translateX(4px);
+    background: rgba(241, 245, 249, 0.95);
 }
 
-/* Accolades Styling */
-.accolade-bold {
-    font-weight: 700;
-    font-size: 0.95rem;
-    color: var(--navy-blue);
-    font-family: 'Merriweather', serif;
+/* Scroll Animation Styles */
+.fade-in-section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    will-change: opacity, transform;
 }
 
-/* Article Preview Image Framing */
+.fade-in-section.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Article Preview Framing */
 .article-preview-img {
     width: 100%;
     max-height: 220px;
     object-fit: cover;
     border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
     transition: transform 0.3s ease, filter 0.3s ease;
 }
 
 .article-preview-img:hover {
     transform: scale(1.02);
-    filter: brightness(1.05);
+    filter: brightness(1.03);
 }
 
-/* Custom Accordion Styling for Publications */
+/* Custom Accordion Dropdown Styling */
 .accordion-item {
     background: #ffffff !important;
-    border: 1px solid rgba(15, 23, 42, 0.15) !important;
+    border: 1px solid rgba(15, 23, 42, 0.12) !important;
     border-radius: 10px !important;
     margin-bottom: 12px;
     overflow: hidden;
+    transition: border-color 0.2s ease;
 }
 
 .accordion-button {
-    background: #f1f5f9 !important;
+    background: #f8fafc !important;
     color: #0f172a !important;
     font-weight: 700 !important;
     font-family: 'Merriweather', serif !important;
@@ -147,7 +130,7 @@ h1, h2, h3, h4, h5, h6, .font-serif {
 }
 
 .accordion-button:not(.collapsed) {
-    background: rgba(250, 204, 21, 0.25) !important;
+    background: rgba(250, 204, 21, 0.2) !important;
     color: #0f172a !important;
     box-shadow: none !important;
 }
